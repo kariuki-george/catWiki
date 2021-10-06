@@ -146,8 +146,8 @@ function BreedContent({ breedInfo, other }) {
             </Flex>
 
             <DataBar
-              title={"Adaptation"}
-              count={breedInfo[0].breeds[0].adaptation}
+              title={"Adaptability"}
+              count={breedInfo[0].breeds[0].adaptability}
             />
 
             <DataBar
@@ -220,8 +220,6 @@ function BreedContent({ breedInfo, other }) {
 export default BreedContent;
 
 function DataBar({ title, count }) {
-  console.log(count);
-
   function changeBackground(num) {
     if (num <= count) {
       return "#544439";
