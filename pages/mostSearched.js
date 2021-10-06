@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import Head from "next/head";
 
-function mostSearched({ response }) {
+function MostSearched({ response }) {
   const [list, setList] = useState([]);
   const variant = useBreakpointValue({
     base: "small",
@@ -54,7 +54,7 @@ function mostSearched({ response }) {
       </Heading>
       <Flex w="100%" direction="column">
         {list.map((breed) => (
-          <Flex
+          <Flex key={breed.id}
             my="1em"
             direction={variant === "small" ? "column" : "row"}
             alignItems="center"
@@ -112,7 +112,7 @@ function mostSearched({ response }) {
   );
 }
 
-export default mostSearched;
+export default MostSearched;
 
 export async function getStaticProps(context) {
   const API_KEY = process.env.api_key;

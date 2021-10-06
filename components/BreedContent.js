@@ -199,7 +199,7 @@ function BreedContent({ breedInfo, other }) {
           justifyContent={"space-around"}
         >
           {otherImages.map((cat) => (
-            <Image
+            <Image key={cat.id}
               src={cat.url}
               alt="breed"
               width="250px"

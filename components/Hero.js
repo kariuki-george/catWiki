@@ -150,9 +150,9 @@ function Hero({ searchList }) {
           >
             <InputRightElement
               color="gray.300"
-              fontSize="1.2em"
-              children={<SearchIcon />}
-            />
+              fontSize="1.2em">
+             <SearchIcon />
+            </InputRightElement>
 
             <Input
               minWidth="100px"
@@ -183,7 +183,7 @@ function Hero({ searchList }) {
                   overflowY="auto"
                 >
                   {suggestedArray.map((breed) => (
-                    <Link href={`/breeds/${breed.id}`}>
+                    <Link href={`/breeds/${breed.id}`} key={breed.id}>
                       <a>
                         <Text m="0.5em">{breed.name}</Text>
                       </a>
@@ -207,9 +207,9 @@ function Hero({ searchList }) {
                         <InputRightElement
                           pointerEvents="none"
                           color="gray.300"
-                          fontSize="1.2em"
-                          children={<SearchIcon />}
-                        />
+                          fontSize="1.2em">
+                        <SearchIcon />
+                        </InputRightElement>
 
                         <Input
                           borderRadius={20}
@@ -224,7 +224,7 @@ function Hero({ searchList }) {
                       </InputGroup>
                       <Menu overflowY="scroll">
                         {suggestedArray.map((breed) => (
-                          <Link href={`/${breed.id}`}>
+                          <Link href={`/${breed.id}`} key={'breed.id'}>
                             <a>
                               <Text m="0.5em">{breed.name}</Text>
                             </a>
@@ -285,7 +285,7 @@ function Hero({ searchList }) {
 
         <Flex wrap="wrap" justifyContent="space-around">
           {urlList.map((cat) => (
-            <Link href={`/breeds/${cat.id}`}>
+            <Link href={`/breeds/${cat.id}`} key={cat.id}>
               <Flex direction="column" m="0.2em" _hover={{ cursor: "pointer" }}>
                 <Img
                   src={cat.image.url}
