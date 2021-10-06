@@ -20,7 +20,7 @@ export default function Home({ res }) {
         <meta name="description" content="A cat blog created using next js" />
         <link rel="icon" href="/devchallenges.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap"
           rel="stylesheet"
