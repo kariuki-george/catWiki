@@ -54,7 +54,8 @@ function MostSearched({ response }) {
       </Heading>
       <Flex w="100%" direction="column">
         {list.map((breed) => (
-          <Flex key={breed.id}
+          <Flex
+            key={breed.id}
             my="1em"
             direction={variant === "small" ? "column" : "row"}
             alignItems="center"
@@ -125,7 +126,6 @@ export async function getStaticProps(context) {
 
   let secondList = [];
   if (res.data) {
-    console.log(res.data.length);
     while (secondList.length < 10) {
       const random = Math.floor(Math.random() * res.data.length);
 

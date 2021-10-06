@@ -17,7 +17,7 @@ function Breed({ breedInfo, other }) {
   return (
     <VStack w="100vw" h="100vh" px="1em" overflowY="auto">
       <Head>
-        <title>Bengal</title>
+        <title>{breedInfo[0].breeds[0].name}</title>
         <meta
           name="description"
           content="Gives a descriptive definition of the cat"

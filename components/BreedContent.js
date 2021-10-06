@@ -15,10 +15,11 @@ import {
 //import Image from "next/image";
 
 function BreedContent({ breedInfo, other }) {
-  const [otherImages, setOtherImages] = React.useState([])
-  React.useEffect(() =>{setOtherImages(other)},[other])
+  const [otherImages, setOtherImages] = React.useState([]);
+  React.useEffect(() => {
+    setOtherImages(other);
+  }, [other]);
 
-  console.log(breedInfo[0].breeds[0]);
   const variant = useBreakpointValue({
     base: "small",
     md: "medium",
@@ -199,7 +200,8 @@ function BreedContent({ breedInfo, other }) {
           justifyContent={"space-around"}
         >
           {otherImages.map((cat) => (
-            <Image key={cat.id}
+            <Image
+              key={cat.id}
               src={cat.url}
               alt="breed"
               width="250px"
