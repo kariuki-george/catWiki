@@ -224,7 +224,7 @@ function Hero({ searchList }) {
                       </InputGroup>
                       <Menu overflowY="scroll">
                         {suggestedArray.map((breed) => (
-                          <Link href={`/${breed.id}`} key={'breed.id'}>
+                          <Link href={`/breeds/${breed.id}`} key={'breed.id'}>
                             <a>
                               <Text m="0.5em">{breed.name}</Text>
                             </a>
